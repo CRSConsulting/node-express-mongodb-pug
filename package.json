@@ -1,18 +1,19 @@
 {
-  "name": "hackathon-starter",
+  "name": "ntw-project",
   "version": "4.3.0",
-  "description": "A boilerplate for Node.js web applications",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
-  },
-  "author": "Sahat Yalkabov",
+  "description": "NTW Project",
+  "author": "CRS Consulting",
   "license": "MIT",
+  "engines": {
+    "node": "6.11.3",
+    "npm": "5.4.2"
+  },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon server.js",
     "test": "mocha --reporter spec",
     "postinstall": "npm rebuild node-sass",
-    "eslint": "eslint **/*.js"
+    "eslint": "eslint **/*.js",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",

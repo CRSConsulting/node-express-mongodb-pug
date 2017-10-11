@@ -1,9 +1,9 @@
 const request = require('supertest');
-const app = require('../app.js');
+const server = require('../server.js');
 
 describe('GET /', () => {
   it('should return 200 OK', (done) => {
-    request(app)
+    request(server)
       .get('/')
       .expect(200, done);
   });
@@ -11,7 +11,7 @@ describe('GET /', () => {
 
 describe('GET /login', () => {
   it('should return 200 OK', (done) => {
-    request(app)
+    request(server)
       .get('/login')
       .expect(200, done);
   });
@@ -19,7 +19,7 @@ describe('GET /login', () => {
 
 describe('GET /signup', () => {
   it('should return 200 OK', (done) => {
-    request(app)
+    request(server)
       .get('/signup')
       .expect(200, done);
   });
@@ -27,7 +27,7 @@ describe('GET /signup', () => {
 
 describe('GET /api', () => {
   it('should return 200 OK', (done) => {
-    request(app)
+    request(server)
       .get('/api')
       .expect(200, done);
   });
@@ -35,7 +35,7 @@ describe('GET /api', () => {
 
 describe('GET /contact', () => {
   it('should return 200 OK', (done) => {
-    request(app)
+    request(server)
       .get('/contact')
       .expect(200, done);
   });
@@ -43,7 +43,7 @@ describe('GET /contact', () => {
 
 describe('GET /random-url', () => {
   it('should return 404', (done) => {
-    request(app)
+    request(server)
       .get('/reset')
       .expect(404, done);
   });
